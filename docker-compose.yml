@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  main:
+    build:
+      context: .
+    secrets:
+      - google_credentials
+    command: python /app/app.py
+
+secrets:
+  google_credentials:
+    file: secrets/google_credentials.json
